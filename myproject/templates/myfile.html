@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJANGO Template</title>
+</head>
+<body>
+    {% if dicActive %}
+    <div style="background-color:burlywood" style="border: 4px groove black">
+        <h1 style="color:black
+        ">Django Template</h1>
+
+        <form action="/newpage/" method="POST">
+            <input type="text" name="take">
+            <button>submit</button> 
+            {% csrf_token %}
+        </form>
+
+        <hr>
+        <p style="border: 2px solid black">In this segment we will learn about the django tamplate where we see how to use the html pages when we want to put on the website during the template making.if the template will so easy to create then why it takes so much time to complete when user want to provide the proper finish in it.</p>
+        <hr>
+        <h2 style="color:red
+        ">Create a pool</h2>
+        <p style="border: 2px solid black">Hello user this is a side where we are going to create a pool with full of beauty and text-decoration so that it can provide an immense knowledge of the text and also about the django language.</p>
+    </div>
+    {% endif %}
+</body>
+</html>

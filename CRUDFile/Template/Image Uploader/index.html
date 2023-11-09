@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <form action="" method="POST" enctype="multipart/form-data"> <!--whenever we work with the images at that time we have to use enctype = "multipart/form-data"-->
+        {% csrf_token %}
+        {{form}}
+        <button>Submit</button>
+    </form>
+    <div class="DisplayImage">
+        {% for value in display%}
+            <img src="{{value.photo.url}}" alt="">
+            <p>{{value.date}}</p>
+        {% endfor %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Dashboard</title>
+
+<!--------------------- Style file ----------------------->
+    <style>
+        .container{
+            background-color: rgb(89, 155, 241);
+            font-size: 24px;
+            color: white;
+            border-radius: 6px;
+            padding: 16px;
+            margin-top: -7px;
+            margin-left: -6px;
+            margin-right: -6px;
+        }
+        .forstyle{
+            list-style: none;
+            padding-left: -60px;
+            padding-right: 30px;
+        }
+        .sub-container{
+            background-color: white;
+            padding: auto auto;
+            color: black;
+            border-radius: 0px;
+            font-size: 18px;
+            margin: 16px;
+        }
+        .sub-container h3{
+            padding-left: 10px;
+        }
+        .sub-container p{
+            padding-left: 10px;
+        }
+        .search-box{
+            width: 100%;
+            height: 6vh;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 544px;
+            border-radius: 3px;
+            border: 2px rgb(74, 203, 210) solid;
+        }
+        #search-input{
+            border: 0;
+            outline: 0;
+            width: 90%;
+            color: black;
+            font: bold;
+        }
+        #search-input::placeholder{
+            font-size: 16px;
+        }
+        #search-button{
+            border: 0;
+            outline: 0;
+            width: -30px;
+            background-color: rgb(108, 223, 241);
+            font-size: 16px;
+            font: bold;
+            padding: 12px;
+            border-radius: 4px;
+        }
+    </style>
+
+</head>
+<body style="background: #b3889b;">
+<!-------------------- Content file ------------------>
+
+    <ul class="message-list">
+        <li class="forstyle Items-received">
+            <div class="container">Chat</div>
+            <div class="sub-container">
+                <h3>AI Chatbot</h3>
+                <p>Hi, I am your AI Chatbot, you can ask me anything</p>
+            </div>
+        </li>
+    </ul>
+
+    <form action="#" class="message-form">
+        {% csrf_token %}
+        <div class="search-box">
+            <input type="text" id="search-input" class="message-input" placeholder="How can i help you">
+            <button type="button" id="search-button">Search</button>
+        </div>
+    </form>
+
+<!-------------------- Script file --------------------->
+    <script>
+        const messageList = document.querySelector(".message-list")
+        const messageForm = document.querySelector(".message-form");
+        const messageInput = document.querySelector(".message-input");
+
+        messageForm.addEventListener('submit', (event) =>{
+            event.preventDefault();
+
+            const message = messageInput.value.trim();
+            if(message.length === 0){
+                return;
+            }
+        })
+    </script>
+</body>
+</html>

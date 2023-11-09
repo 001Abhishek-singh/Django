@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Add Section</title>
+</head>
+<body>
+    <h2>Filter</h2>
+    <br>
+    <hr>
+
+    <form action="#" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{new_form}}
+        <button>Submit</button>
+    </form>
+
+    {% for item in obj %}
+    {{item}}
+    {% endfor %}
+</body>
+</html>

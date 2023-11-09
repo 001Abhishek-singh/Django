@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Learning</title>
+    <link rel = "stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+    <div id="div1" style="background-color:beige">        
+        <h1 >WELCOME TO DJANGO MANIA</h1>
+        <hr>
+        <div id="div2" style="background-color:light green">
+            <ul style="background-color: blueviolet;" style="color: red;">
+                <li>It is a python framework</li>
+                <li>It is used for backend portion</li>
+                <li>It provide orm type database</li>
+                <li>It has a potential to store the data dynamically</li>
+                <li>It will always provide flexibility to the user</li>
+            </ul>
+        </div>
+        <hr>
+        <div id="div3">
+            <img src="mac_image_3.png" alt="MacBook Air">
+            <hr>
+            <p>The macbook is used to access various work either in home or in offices they will always use to provide fundamental structure with good processing speed for all kind of work.here they are using nano chips through which they can enhance the speed drastically with good time compression.</p>
+            <hr>
+            <div>
+                {% include "nav.html" %}
+            </div>
+        </div>
+
+        <div class="fortable">
+            <ul><!--- index.html me 'mera & register' ka link diya-->
+                <li><a href="/page5/">Register</a></li>
+                <li><a href="/page4/">Mera</a></li>
+                <li><a href="/kiska/">Kiska</a></li>
+                <li><a href="/sabka/">Sabka</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

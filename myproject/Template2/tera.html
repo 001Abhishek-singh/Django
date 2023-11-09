@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: darkkhaki;
+        }
+    </style>
+</head>
+<body>
+    
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto omnis, libero aut ipsam nostrum accusantium consequatur eaque architecto qui. Dolorem eius iure error assumenda fuga consequuntur excepturi, ut illum natus dolores velit quos exercitationem molestiae nisi maiores pariatur. Incidunt dicta sint doloribus quod perspiciatis harum blanditiis aliquam aliquid. Unde delectus minus voluptate nobis dolorum non, reprehenderit nam facilis sed mollitia eos nihil consectetur exercitationem repellendus facere ipsum. Possimus corporis nihil facere dolorum quidem ab, quia exercitationem atque iusto vel totam optio, repellat non delectus consectetur quo esse eos rerum voluptatem obcaecati eligendi, alias quam eveniet? Velit ea qui necessitatibus asperiores.</p>
+
+    <form action="/tera/" method="POST">
+        {% csrf_token %}
+        <input style="width: 240px" type="text" name="textinput" id="">
+        <button>Submit</button>
+    </form>
+
+    {% if isactive %}
+        <div class="fromview" style="background-color: aquamarine;">
+            <h1>My university name is: {{university}}</h1>
+            <h1>I am studying in {{course}}</h1>
+            <h1>{{department}} Engineering is my trade</h1>
+            <h1>{{subject}} is one of the interesting subject.</h1>
+        </div>
+    {% endif %}
+</body>
+</html>

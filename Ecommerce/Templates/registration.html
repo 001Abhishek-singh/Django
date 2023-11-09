@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <link rel="stylesheet" href="{%static 'registration.css' %}">
+</head>
+<body class="mainbody">
+    
+    <div class="maindiv">
+        <div class="headingdiv">
+            <header>
+                <h1>Registration Form:</h1>
+            </header>
+        </div>
+
+        <div class="contentdiv" >
+            <form action="/register/" method="POST" class="formstyle" display="flex">
+                {% csrf_token %}
+                <label for="001">Name</label>
+                <input type="text" name="Name" id="001" placeholder="">
+                <br>
+
+                <label for="002">Surname</label>
+                <input type="text" name="Surname" id="002" placeholder="">
+                <br>
+
+                <label for="003">Father's Name</label>
+                <input type="text" name="Father" id="003" placeholder="">
+                <br>
+
+                <label for="004">Mother's Name</label>
+                <input type="text" name="Mother" id="004" placeholder="">
+                <br>
+
+                <label for="005">Email</label>
+                <input type="text" name="Email" id="005" placeholder="">
+                <br>
+
+                <label for="006">Phone Number</label>
+                <input type="text" name="Phone" id="006" placeholder="">
+                <br>
+
+                <label for="007">Course</label>
+                <!--<input type="text" name="Course" id="007" placeholder="Course">-->
+                <select name="Course" id="007">
+                    <option value="course">Select Course</option>
+                    <option value="B.Tech">B.Tech</option>
+                    <option value="B.Sc">B.Sc</option>
+                    <option value="BCA">BCA</option>
+                    <option value="BA">BA(Integrated)</option>
+                    <option value="B.pharM">B.Pharmcy</option>
+                    <option value="Mca">MCA</option>
+                </select>
+                <br>
+
+                <label for="008">Department</label>
+                <input type="text" name="Dept." id="008" placeholder="">
+                <br>
+
+                <label for="009">Year</label>
+                <input type="text" name="Year" id="009" placeholder="">
+                <br>
+
+                <label for="010">University Name</label>
+                <input type="text" name="University" id="010" placeholder="">
+                <br>
+
+                <label for="011">Address</label>
+                <input type="text" name="Address" id="011" placeholder="">
+                <br>
+
+                <textarea name="Tell me about yourself" id="012" cols="50" rows="7">Tell me about yourself</textarea>
+                <br>
+
+                <p>Above mentioned details are correct and full in my knowledge,if anything will be found incorrect then strict disciplinary action would be taken against me and i am totally agree with the term and conditions of the above mentioned firm.
+                    <input type="checkbox" name="term&condition" id="013" value="Term & Condition" class="checkboxstyle">
+                </p>
+
+                <button><a href="login/" style="text-decoration:none">Submit</a></button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

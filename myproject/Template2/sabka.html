@@ -1,0 +1,26 @@
+<!--{% include 'index.html' %}-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+</head>
+<body>
+
+    <div>
+        <h1>my name is {{myname}} & my age is {{age}}</p>
+    </div>
+        
+    <form action="/sabka/" method="POST">
+        {% csrf_token %}
+        <input type="text" name="forname" id="">
+        <input type="password" name="forpassword" id="">
+        <input type="email" name="foremail">
+        <button>Submit</button>
+    </form><!-- action wants a suitable url where we can fetch our data which we recieve from the html template.-->
+
+
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django page 2</title>
+</head>
+<body>
+    <div style="border: 2px solid black">
+        <p style="background-color:rosybrown">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, cumque aliquid. Sunt, consequatur voluptatibus quo nulla praesentium consectetur est asperiores pariatur animi reprehenderit ullam quam fugiat tenetur autem. Eius odio id exercitationem obcaecati similique, in harum cupiditate soluta labore, expedita sunt enim nemo. Quidem, mollitia quam. Dignissimos delectus neque natus, at ducimus facere rerum dolore porro repudiandae, et saepe modi doloribus atque qui veniam quam eaque facilis, tenetur quas exercitationem omnis inventore. Architecto et repudiandae ex odio! Odit molestias officiis laboriosam tempore id, eligendi hic libero sint voluptate ea rerum animi maiores modi dolores aliquam fugit corrupti voluptatem expedita neque eos similique numquam? Dolorum aliquam architecto tempora voluptates. Quibusdam aliquam, soluta quidem adipisci nostrum aut qui sit recusandae magnam ipsam mollitia itaque, esse earum. Blanditiis aspernatur quasi provident debitis cupiditate dolorum non inventore, omnis laudantium laboriosam quod? Odit optio sit aliquam nam, dolores ducimus modi, alias et consectetur minus, dolorem nostrum sunt. Qui veniam fugiat porro, animi iure pariatur? Id excepturi animi et delectus, a deleniti soluta illo deserunt ipsum tempora veritatis autem possimus, placeat sed nobis! Neque eaque similique hic veniam provident consectetur id quam qui, et eos velit placeat dolore, quasi nulla ullam rem sed tenetur quo aperiam.</p>
+        <hr>
+        <div>
+            {% include "nav.html" %}   <!--this is django template language technique-->
+            <hr>
+            <h1>Hello friends my name is {{name}}</h1>
+            <h2>my first student name is {{student_data.stu1}}</h2>
+            <h2>my second student name is {{student_data.stu2}}</h2>
+            <h2>my third student name is {{student_data.stu3}}</h2>
+            <hr>
+            <h3>they all are studying in {{class}}</h3>
+            <hr>
+            <h3>many students like {{subject}}</h3>
+            <hr>
+            <h3>their roll no is {{Roll}}</h3>
+            <hr>
+            <h3>personality is given as{{Personality}}</h3>
+        </div>
+    </div>
+</body>
+</html>

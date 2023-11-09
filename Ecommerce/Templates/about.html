@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}About{% endblock title %}
+<!-- {% include "base.html" %} -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block body %}
+
+    <div class="forfeedback">
+        <textarea name="feedback" id="" cols="30" rows="10">please provide your essential feedback</textarea>
+    </div>
+    
+    {% endblock body%}
+</body>
+</html>

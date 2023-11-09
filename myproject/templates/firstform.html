@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form</title>
+</head>
+<body>
+    <div style="background-color:silver">
+        <h1>Django Form</h1>
+        <p style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">we will now going to create a django form which will use to take the input from the user.</p>
+        <hr>
+        <form action="/form/" method="post">
+
+            <label for="Name">NAME</label>
+            <br>
+            <input type="text" name="name">
+            <br>
+
+            <label for="Class">CLASS</label>
+            <br>
+            <input type="text" name="class">
+            <br>
+
+            <label for="Department">DEPARTMENT</label>
+            <br>
+            <input type="text" name="department">
+            <br>
+
+            <label for="Roll no: ">ROLL NO</label>
+            <br>
+            <input type="text" name="roll">
+            <br>
+
+            <label for="Address">ADDRESS</label>
+            <br>
+            <input type="text" name="address">
+            <br>
+
+            <label for="State">STATE</label>
+            <br>
+            <input type="text" name="state">
+            <br>
+
+            <button>Submit</button>
+            {% csrf_token %}
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee File</title>
+</head>
+<body>
+    <h2> VIEW PAGE</h2>
+    <br>
+    <hr>
+    
+    <table>
+       <thead>    <!--table head-->
+            <th>   <!--table header-->
+                <tr>  <!--table row for table header-->
+                    <td>Name</td>   <!--table data-->
+                    <td>Surname</td>
+                    <td>Department</td>
+                    <td>Bonus</td>
+                    <td>Salary</td>
+                    <td>Role</td>
+                    <td>Phone</td>
+                    <td>Hire Date</td>
+                </tr>
+            </th>
+        </thead>
+        {% for value in display %}
+        <tbody>   <!-- table body -->
+            <tr>  <!-- table row for table body-->
+                <td>{{value.first_name}}</td> <!-- table data-->
+                <td>{{value.last_name}}</td>
+                <td>{{value.department}}</td>
+                <td>{{value.bonus}}</td>
+                <td>{{value.salary}}</td>
+                <td>{{value.role}}</td>
+                <td>{{value.phone}}</td>
+                <td>{{value.hire_date}}</td>
+            </tr>
+        </tbody>
+        {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

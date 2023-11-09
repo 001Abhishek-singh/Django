@@ -1,0 +1,87 @@
+.mainbody{
+    background-color:rgb(78, 100, 91);
+}
+.maindiv{
+    display:block;
+    background-color:wheat;
+    width:70%;
+    height:90%;
+    margin: 60px 200px;
+    padding: 8px 14px 30px 14px;
+}
+.maindiv .headingdiv{
+    display: block;
+    background-color:cornsilk;
+    width: 70%;
+    height: 60%;
+    margin: 20px 25px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.maindiv .contentdiv{
+    display:inline-flexbox;
+    background-color:burlywood;
+    position:static;
+    left: 12px;
+    top: 12px;
+    margin: 20px 25px;
+    border-radius: 10px;
+    padding: 8px 10px;
+    font-size: 21px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.contentdiv .formstyle {
+    text-align:justify;
+    text-decoration: none;
+    margin: 4px 4px;
+    position:relative;
+    white-space:normal;
+}
+.formstyle label{
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+    text-align:left;
+    
+}
+.formstyle input{
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+    text-align:left;
+    margin-left: 400px;
+    width: 300px;
+    height:22px;
+    border-radius: 6px;
+    text-decoration-line: none;
+    text-decoration: double;
+}
+.formstyle select{
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+    text-align:left;
+    margin-left: 400px;
+    width: 300px;
+    height:30px;
+    border-radius: 6px;
+    border-color: black;
+    border: -60px;
+}
+.formstyle textarea{
+    width: 95%;
+    border: 0%;
+    outline: 0%;
+    resize: none;
+    background: white;
+    border-color: white;
+}
+.formstyle button{
+    font-size: medium;
+    font-weight: 500;
+   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.maindiv .contentdiv .formstyle .checkboxstyle{
+    display:block;
+    margin: 0px 106px;
+    
+}

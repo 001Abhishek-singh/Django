@@ -1,0 +1,133 @@
+<!-- 1 email
+2 password 
+3 submit button
+4 forget password (as button so that they can re-create their password)
+5 signup (link to redirect to signup page)
+6 logout
+(if password correct then redirect to new home page)
+(if password or email will be incorrect then display invalid password,invalid email,fill the credentials ) -->
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Login page</title>
+
+    <style>
+        
+        #formbackground{
+            background-color:rgb(135, 169, 203);
+            
+        }
+
+        #forh1{
+            margin: 3% 27% ;
+        }
+
+        #foremailwidth{
+            width: 40%;
+            margin: 4% 27%;
+        }
+
+        #forpasswordwidth{
+            width: 40%;
+            margin: 0 27%;
+        }
+
+        #forcheckbutton{
+            margin: 0 27%;
+        }
+        #forsubmitbutton{
+            margin: 0 27% 1%
+        }
+    </style>
+
+  </head>
+  <body>
+    <!--------------- Login form -------------->
+    <form class="container-fluid" id="formbackground" method="POST" action="#">
+        {% csrf_token %}
+        <h1 id="forh1">LOGIN</h1>
+
+        <div class="mb-3" id="foremailwidth">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" name="UserEmail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text text-white">We'll never share your email with anyone else.</div>
+        </div>
+
+        <div class="mb-3" id="forpasswordwidth">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" name="Loginpassword" id="exampleInputPassword1">
+          <div id="passwordHelpBlock" class="form-text text-white">
+            Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+          </div>
+        </div>
+
+        <div class="mb-3 form-check" id="forcheckbutton">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out&emsp;&emsp;&emsp;</label>
+          <span><a href="\">Signup</a>&emsp;&emsp;&emsp;</span>
+          <span><a href="#">Forget Password ?</a></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="forsubmitbutton">Submit</button>
+      </form>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

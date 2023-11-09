@@ -1,0 +1,17 @@
+#div1{
+    background-color: bisque;
+    border: 2px solid black;
+    padding: 8px;
+    font: medium;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+}
+
+#div2{
+    background-color: peru;
+    border: 2px solid sandybrown;
+}
+
+#div3{
+    background-color: burlywood;
+    border: 2px groove black;
+}

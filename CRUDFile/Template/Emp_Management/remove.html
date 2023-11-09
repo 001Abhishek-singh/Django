@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Element Section</title>
+</head>
+<body>
+    <ul>
+        {% for i in display %}
+        <li>
+            <a href="#">{{i.first_name}} {{i.last_name}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

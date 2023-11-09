@@ -1,0 +1,47 @@
+{% extends "base2.html" %}
+{% block title %}Home-{{name}}{% endblock title %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'shoplogin.css'%}">
+    <style>
+        .forbgcolor{
+            background-image: url("{%static 'bg.jpeg'%}");
+        }
+    </style>
+
+</head>
+<body>
+    {% block body %}
+
+        
+
+        <!-- <style>
+            body{
+                background-image: url("{%static 'bg.jpeg'%}");
+            }
+        </style> -->
+        <!-- <h1>Hello world finally i have set the image as background.</h1> -->
+        <!-- <img src="{%static 'muza.jpeg'%}" alt="muzaffarpur">  -->
+        {{form.as_p}} 
+<br><br>
+
+    <!-- {{form}} -->
+       
+
+    <form action="/" method="POST">
+        {% csrf_token %}
+        <input type="text" name="forname" id="">
+        <input type="password" name="forpassword1" id="">
+        <input type="password" name="forpassword2">
+        <button>Submit</button>
+    </form>
+        
+
+    {% endblock body %}
+</body>
+</html>
+
