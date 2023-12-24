@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}Blog{% endblock title %}
+</head>
+<body>
+    {% block body %}
+
+            <!-- Set up your HTML -->
+        <div class="owl-carousel">
+            {% for value in CategoryObj %}
+            <div class="row">
+                <div class="col s12 center-align" style="border: 2px solid rgb(206, 124, 18);padding:6px 6px 8px 6px;">
+                    <img src="/Media/{{value.Category_image}}" class="responsive-img">
+                    <br>
+                    <h6 style="margin-bottom:8px">{{value.Writer_name}}</h6> 
+                    <a href="#" class="btn">View</a>
+                </div> 
+            </div>
+            {% endfor %}
+        </div>
+
+        {% for value in CategoryObj %}
+
+        <div class="row">
+            <div class="col s7">
+                {{value.Description | truncatewords:60 | safe}}
+            </div>
+
+            <div class="col s3">
+                {{value.Category_title}}
+                {{value.Category_url}}
+            </div>
+
+            <div class="col s2">
+                {{value.Writer_name}}
+                <img src="/Media/{{value.Category_image}}" class="responsive-img">
+            </div>
+        </div>
+        {% endfor %}
+
+    {% endblock body%}
+</body>
+</html>

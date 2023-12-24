@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock title %}</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <style>
+        #forpadding{
+            padding-left: 40px;
+            padding-right: 70px;
+        }
+    </style>
+</head>
+<body style="background-color: burlywood;">
+
+    <!-- Dropdown Structure -->
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a href="/blog/">Tourism</a></li>
+        <li><a href="/blog/">Food</a></li>
+        <li class="divider"></li>
+        <li><a href="/blog/">Multimedia</a></li>
+    </ul>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-wrapper" id="forpadding">
+                <a href="/" class="brand-logo">Home</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="/post/">Post</a></li>
+                    <li><a href="/admin/">Admin</a></li>
+                    <li><a href="/about/">About</a></li>
+                    <!-- Dropdown Trigger -->
+                    <li><a class="dropdown-trigger" href="/blog/" data-target="dropdown1">Blog<i class="material-icons right">Category</i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        M.AutoInit();
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+
+    <script>
+        $(document).ready(function(){
+            $(".owl-carousel").owlCarousel();
+        });
+    </script>
+    {% block body %} {% endblock body %}
+
+</body>
+</html>

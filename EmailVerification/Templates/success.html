@@ -1,0 +1,24 @@
+{%extends 'base.html'%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%block title%}<title>Registration-successful</title>{%endblock title%}
+</head>
+<body>
+    {%block body%}
+    <div>
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-info">
+                    {{message}}
+                </div>
+            {% endfor %}
+        {% endif %}
+        <!-- <h4>Now you can proceed with the Login page</h4> -->
+        <!-- <a href="{% url 'mylogin' %}" class="btn btn-primary btn-lg">Login</a> -->
+    </div>
+    {%endblock body%}
+</body>
+</html>
